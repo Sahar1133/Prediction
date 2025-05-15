@@ -12,10 +12,13 @@ st.set_page_config(page_title="Career Path Predictor with IG Feature Selection",
 st.title("Career Path Predictor with Feature Selection via Information Gain")
 
 # Step 1: Upload Dataset
-uploaded_file = st.file_uploader("Upload your dataset CSV file", type=["csv"])
+uploaded_file = st.file_uploader("Upload your dataset CSV file", type=["csv","xlsx"])
 
-if uploaded_file is not None:
+if uploaded_file.name.endswith('.csv'):
     data = pd.read_csv(uploaded_file)
+elif  uploaded_file.name.endswith('.xlsx'):
+    data = pd.read_excel(uploaded_file)
+    
     st.subheader("Dataset Preview")
     st.write(data.head())
     st.write(f"Shape: {data.shape}")
