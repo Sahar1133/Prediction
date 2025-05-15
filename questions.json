@@ -1,1890 +1,912 @@
 {
-  "Interest": [
-    {
-      "question": "What best describes your preference for Interest? (Q1)",
-      "options": [
-        "Arts",
-        "Mathematics",
-        "Human Resources",
-        "Lawyer"
-      ]
+  "questionnaire": {
+    "direct_features": {
+      "Years_of_Experience": {
+        "question": "How many years of professional work experience do you have?",
+        "type": "number",
+        "range": [0, 50]
+      },
+      "GPA": {
+        "question": "What is your cumulative GPA (on a 4.0 scale)?",
+        "type": "number",
+        "range": [0.0, 4.0]
+      },
+      "Certifications_Count": {
+        "question": "How many professional certifications have you earned?",
+        "type": "number",
+        "range": [0, 20]
+      },
+      "Courses_Completed": {
+        "question": "How many relevant courses have you completed in your field?",
+        "type": "number",
+        "range": [0, 50]
+      },
+      "GitHub_Repos": {
+        "question": "How many GitHub repositories have you created or contributed to?",
+        "type": "number",
+        "range": [0, 100]
+      },
+      "Public_Speaking_Experience": {
+        "question": "How many public speaking engagements have you participated in?",
+        "type": "number",
+        "range": [0, 100]
+      }
     },
-    {
-      "question": "What best describes your preference for Interest? (Q2)",
-      "options": [
-        "Arts",
-        "Mathematics",
-        "Human Resources",
-        "Lawyer"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Interest? (Q3)",
-      "options": [
-        "Arts",
-        "Mathematics",
-        "Human Resources",
-        "Lawyer"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Interest? (Q4)",
-      "options": [
-        "Arts",
-        "Mathematics",
-        "Human Resources",
-        "Lawyer"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Interest? (Q5)",
-      "options": [
-        "Arts",
-        "Mathematics",
-        "Human Resources",
-        "Lawyer"
+
+    "indirect_features": {
+      "Interest": [
+        {
+          "question": "Which of these fields interests you the most?",
+          "options": ["Technology", "Business", "Arts", "Healthcare", "Education", "Engineering", "Law", "Other"]
+        },
+        {
+          "question": "What type of work excites you?",
+          "options": ["Creative projects", "Analytical problems", "Strategic planning", "Hands-on tasks"]
+        },
+        {
+          "question": "When browsing professional content, what topics attract you?",
+          "options": ["Technical innovations", "Business trends", "Creative arts", "Scientific research"]
+        },
+        {
+          "question": "Which professional conference would you most like to attend?",
+          "options": ["Tech/Developer", "Business Leadership", "Creative Arts", "Scientific Research"]
+        },
+        {
+          "question": "What type of professional books do you typically read?",
+          "options": ["Technical manuals", "Business strategy", "Creative arts", "Scientific journals"]
+        }
+      ],
+
+      "Work_Style": [
+        {
+          "question": "How do you prefer to work?",
+          "options": ["Independently", "Collaboratively", "Flexible mix"]
+        },
+        {
+          "question": "When assigned a project, you typically:",
+          "options": ["Work alone", "Form a team", "Adapt to situation"]
+        },
+        {
+          "question": "Your ideal work environment has:",
+          "options": ["Quiet solo space", "Team collaboration areas", "Mix of both"]
+        },
+        {
+          "question": "How do you make decisions at work?",
+          "options": ["On my own", "Through group consensus", "Depends on situation"]
+        },
+        {
+          "question": "When solving problems, you prefer to:",
+          "options": ["Figure it out yourself", "Brainstorm with others", "Use best approach for situation"]
+        }
+      ],
+
+      "Strengths": [
+        {
+          "question": "What is your greatest professional strength?",
+          "options": ["Strategic thinking", "Creativity", "Analytical skills", "Practical execution"]
+        },
+        {
+          "question": "When praised at work, it's usually for your:",
+          "options": ["Big-picture vision", "Innovative ideas", "Problem-solving", "Getting things done"]
+        },
+        {
+          "question": "Which ability comes most naturally to you?",
+          "options": ["Long-term planning", "Original thinking", "Data analysis", "Hands-on work"]
+        },
+        {
+          "question": "In team projects, you typically contribute:",
+          "options": ["Overall strategy", "Creative solutions", "Detailed analysis", "Practical implementation"]
+        },
+        {
+          "question": "Which skill have you developed the most?",
+          "options": ["Strategic planning", "Creative thinking", "Analytical reasoning", "Practical skills"]
+        }
+      ],
+
+      "Communication_Skills": [
+        {
+          "question": "How would you rate your verbal communication skills?",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "question": "How comfortable are you presenting to groups?",
+          "options": ["Uncomfortable", "Somewhat comfortable", "Very comfortable"]
+        },
+        {
+          "question": "When explaining complex ideas, you:",
+          "options": ["Struggle to simplify", "Can explain with effort", "Explain clearly and easily"]
+        },
+        {
+          "question": "How effective are your written communications?",
+          "options": ["Need improvement", "Adequate", "Strong"]
+        },
+        {
+          "question": "In conflicts, how well do you communicate your perspective?",
+          "options": ["Poorly", "Adequately", "Very effectively"]
+        }
+      ],
+
+      "Leadership_Skills": [
+        {
+          "question": "How often do you take leadership roles?",
+          "options": ["Rarely", "Sometimes", "Frequently"]
+        },
+        {
+          "question": "When leading a team, you focus on:",
+          "options": ["Setting direction", "Motivating others", "Both equally"]
+        },
+        {
+          "question": "How comfortable are you making tough decisions?",
+          "options": ["Uncomfortable", "Somewhat comfortable", "Very comfortable"]
+        },
+        {
+          "question": "How do you handle responsibility for others' work?",
+          "options": ["Avoid it", "Accept when needed", "Welcome it"]
+        },
+        {
+          "question": "When projects fail, as a leader you:",
+          "options": ["Blame others", "Take some responsibility", "Take full responsibility"]
+        }
+      ],
+
+      "Teamwork_Skills": [
+        {
+          "question": "How well do you work in team environments?",
+          "options": ["Poorly", "Adequately", "Very well"]
+        },
+        {
+          "question": "In group projects, your role is usually:",
+          "options": ["Independent contributor", "Active collaborator", "Depends on project"]
+        },
+        {
+          "question": "How do you handle team disagreements?",
+          "options": ["Avoid them", "Mediate", "Take a side"]
+        },
+        {
+          "question": "When a teammate struggles, you:",
+          "options": ["Focus on your work", "Offer some help", "Actively support them"]
+        },
+        {
+          "question": "How important is team harmony to you?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        }
+      ],
+
+      "Decision_Making": [
+        {
+          "question": "How do you typically make decisions?",
+          "options": ["Quickly/intuitively", "After careful analysis", "With others' input"]
+        },
+        {
+          "question": "When facing uncertainty, you:",
+          "options": ["Delay deciding", "Make best guess", "Research thoroughly"]
+        },
+        {
+          "question": "How often do you regret decisions?",
+          "options": ["Frequently", "Sometimes", "Rarely"]
+        },
+        {
+          "question": "In urgent situations, your decisions are:",
+          "options": ["Hasty", "Calculated risks", "Well-considered"]
+        },
+        {
+          "question": "How do you incorporate data in decisions?",
+          "options": ["Minimally", "When available", "Extensively"]
+        }
+      ],
+
+      "Aptitude_Level": [
+        {
+          "question": "How quickly do you learn new skills?",
+          "options": ["Slowly", "Average pace", "Quickly"]
+        },
+        {
+          "question": "When facing new challenges, you feel:",
+          "options": ["Overwhelmed", "Challenged", "Excited"]
+        },
+        {
+          "question": "How would you rate your problem-solving ability?",
+          "options": ["Below average", "Average", "Above average"]
+        },
+        {
+          "question": "When learning something difficult, you:",
+          "options": ["Give up easily", "Persist with effort", "Enjoy the challenge"]
+        },
+        {
+          "question": "How adaptable are you to new technologies/methods?",
+          "options": ["Resistant", "Adapt with time", "Quick to adapt"]
+        }
+      ],
+
+      "Field_of_Study": [
+        {
+          "question": "What was your primary academic discipline?",
+          "options": ["Sciences", "Arts/Humanities", "Business", "Engineering", "Other"]
+        },
+        {
+          "question": "Which subjects came most naturally to you?",
+          "options": ["Technical", "Creative", "Analytical", "Practical"]
+        },
+        {
+          "question": "What type of coursework did you enjoy most?",
+          "options": ["Theoretical", "Creative", "Technical", "Applied"]
+        },
+        {
+          "question": "Your academic strengths were in:",
+          "options": ["Math/Science", "Arts/Literature", "Business", "Technology"]
+        },
+        {
+          "question": "Which describes your learning focus?",
+          "options": ["Specialized depth", "Broad interdisciplinary", "Practical skills", "Theoretical"]
+        }
+      ],
+
+      "Adaptability": [
+        {
+          "question": "How do you handle unexpected changes?",
+          "options": ["Struggle", "Adapt eventually", "Adjust quickly"]
+        },
+        {
+          "question": "When procedures change at work, you:",
+          "options": ["Resist", "Accept with time", "Embrace"]
+        },
+        {
+          "question": "How comfortable are you with ambiguity?",
+          "options": ["Uncomfortable", "Somewhat comfortable", "Very comfortable"]
+        },
+        {
+          "question": "When priorities shift suddenly, you:",
+          "options": ["Get frustrated", "Adjust with effort", "Pivot easily"]
+        },
+        {
+          "question": "How flexible are you with work assignments?",
+          "options": ["Prefer consistency", "Flexible within limits", "Very flexible"]
+        }
+      ],
+
+      "Time_Management": [
+        {
+          "question": "How do you manage deadlines?",
+          "options": ["Often late", "Usually on time", "Always early"]
+        },
+        {
+          "question": "Your approach to scheduling is:",
+          "options": ["Disorganized", "Somewhat structured", "Highly organized"]
+        },
+        {
+          "question": "How do you prioritize tasks?",
+          "options": ["Struggle with priorities", "Use basic systems", "Have effective methods"]
+        },
+        {
+          "question": "When multitasking, you:",
+          "options": ["Get overwhelmed", "Manage adequately", "Excel"]
+        },
+        {
+          "question": "How often do you miss deadlines?",
+          "options": ["Frequently", "Occasionally", "Rarely"]
+        }
+      ],
+
+      "Problem_Solving": [
+        {
+          "question": "Your problem-solving approach is:",
+          "options": ["Methodical", "Creative", "Practical"]
+        },
+        {
+          "question": "When stuck on a problem, you:",
+          "options": ["Give up quickly", "Persist with same approach", "Try new approaches"]
+        },
+        {
+          "question": "How do you approach complex challenges?",
+          "options": ["Avoid them", "Break them down", "Tackle head-on"]
+        },
+        {
+          "question": "When solving problems, you rely more on:",
+          "options": ["Data", "Intuition", "Experience"]
+        },
+        {
+          "question": "How innovative are your solutions?",
+          "options": ["Conventional", "Somewhat innovative", "Highly innovative"]
+        }
+      ],
+
+      "Emotional_Intelligence": [
+        {
+          "question": "How aware are you of others' feelings?",
+          "options": ["Low", "Moderate", "High"]
+        },
+        {
+          "question": "In conflicts, you:",
+          "options": ["Avoid", "Address directly", "Seek understanding"]
+        },
+        {
+          "question": "How do you handle criticism?",
+          "options": ["Defensively", "With some discomfort", "Openly"]
+        },
+        {
+          "question": "How empathetic are you?",
+          "options": ["Low", "Moderate", "High"]
+        },
+        {
+          "question": "When colleagues are stressed, you:",
+          "options": ["Don't notice", "Notice but don't act", "Offer support"]
+        }
+      ],
+
+      "Stress_Tolerance": [
+        {
+          "question": "How do you handle work pressure?",
+          "options": ["Poorly", "Adequately", "Well"]
+        },
+        {
+          "question": "When overwhelmed, you:",
+          "options": ["Shut down", "Push through", "Manage effectively"]
+        },
+        {
+          "question": "Your stress response is typically:",
+          "options": ["Anxious", "Frustrated", "Calm"]
+        },
+        {
+          "question": "How often does work stress affect you?",
+          "options": ["Frequently", "Sometimes", "Rarely"]
+        },
+        {
+          "question": "Under tight deadlines, you:",
+          "options": ["Panic", "Feel pressured but work", "Thrive"]
+        }
+      ],
+
+      "Learning_Style": [
+        {
+          "question": "You learn best through:",
+          "options": ["Reading", "Listening", "Doing", "Visuals"]
+        },
+        {
+          "question": "When learning something new, you prefer to:",
+          "options": ["Read instructions", "Hear explanations", "Try it out", "See demonstrations"]
+        },
+        {
+          "question": "What helps you remember information best?",
+          "options": ["Written notes", "Verbal repetition", "Hands-on practice", "Diagrams"]
+        },
+        {
+          "question": "Your ideal training session would be:",
+          "options": ["Manual to read", "Lecture", "Interactive workshop", "Visual presentation"]
+        },
+        {
+          "question": "When studying, you typically:",
+          "options": ["Read text", "Discuss with others", "Apply concepts", "Create visuals"]
+        }
+      ],
+
+      "Career_Goals": [
+        {
+          "question": "Your primary career goal is:",
+          "options": ["Technical mastery", "Leadership", "Creative expression", "Helping others"]
+        },
+        {
+          "question": "In 5 years, you see yourself as:",
+          "options": ["Specialist", "Manager", "Entrepreneur", "Consultant"]
+        },
+        {
+          "question": "What motivates you most professionally?",
+          "options": ["Money", "Recognition", "Creativity", "Impact"]
+        },
+        {
+          "question": "Your ideal career provides:",
+          "options": ["Stability", "Challenge", "Creativity", "Flexibility"]
+        },
+        {
+          "question": "How important is career advancement?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        }
+      ],
+
+      "Location_Preference": [
+        {
+          "question": "Your ideal work location is:",
+          "options": ["Urban city", "Suburban", "Rural", "Anywhere"]
+        },
+        {
+          "question": "How important is geographic location for your job?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Would you work in a different country?",
+          "options": ["No", "Maybe", "Yes"]
+        },
+        {
+          "question": "Your commute tolerance is:",
+          "options": ["Short only", "Moderate", "Long is okay"]
+        },
+        {
+          "question": "Do you prefer working in a specific region?",
+          "options": ["Yes, strongly", "Mild preference", "No preference"]
+        }
+      ],
+
+      "Willing_to_Relocate": [
+        {
+          "question": "Would you relocate for a better job?",
+          "options": ["No", "Maybe", "Yes"]
+        },
+        {
+          "question": "How far would you move for an ideal position?",
+          "options": ["Same city", "Same country", "Internationally"]
+        },
+        {
+          "question": "What would motivate you to relocate?",
+          "options": ["Salary", "Career growth", "Lifestyle", "Not willing"]
+        },
+        {
+          "question": "How quickly could you relocate if needed?",
+          "options": ["Couldn't", "With notice", "Immediately"]
+        },
+        {
+          "question": "Have you relocated for work before?",
+          "options": ["No", "Once", "Multiple times"]
+        }
+      ],
+
+      "Highest_Degree": [
+        {
+          "question": "What is your highest completed education level?",
+          "options": ["High School", "Associate", "Bachelor's", "Master's", "Doctorate"]
+        },
+        {
+          "question": "Do you plan to pursue further education?",
+          "options": ["No", "Maybe", "Yes"]
+        },
+        {
+          "question": "How important was formal education for your career?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Your educational path was:",
+          "options": ["Traditional", "Non-traditional", "Still in progress"]
+        },
+        {
+          "question": "Which best describes your education?",
+          "options": ["Focused on one field", "Interdisciplinary", "Career-focused", "Academic"]
+        }
+      ],
+
+      "Industry_of_Experience": [
+        {
+          "question": "Which industry have you worked in most?",
+          "options": ["Tech", "Finance", "Healthcare", "Education", "Manufacturing", "Other"]
+        },
+        {
+          "question": "Your professional network is primarily in:",
+          "options": ["One industry", "A few industries", "Diverse fields"]
+        },
+        {
+          "question": "How many industries have you worked in?",
+          "options": ["One", "Two-three", "Four or more"]
+        },
+        {
+          "question": "Would you switch industries for the right opportunity?",
+          "options": ["No", "Maybe", "Yes"]
+        },
+        {
+          "question": "Your industry expertise is:",
+          "options": ["Specialized", "Broad", "Developing"]
+        }
+      ],
+
+      "Internship_Experience": [
+        {
+          "question": "How many internships have you completed?",
+          "options": ["None", "1-2", "3 or more"]
+        },
+        {
+          "question": "Your internship experience was:",
+          "options": ["Not applicable", "Limited", "Extensive"]
+        },
+        {
+          "question": "How valuable were internships for your career?",
+          "options": ["Not applicable", "Somewhat valuable", "Very valuable"]
+        },
+        {
+          "question": "Your internships were in:",
+          "options": ["One field", "Multiple fields", "No internships"]
+        },
+        {
+          "question": "Did internships lead to job offers?",
+          "options": ["No internships", "No offers", "Yes, offers"]
+        }
+      ],
+
+      "Remote_Work_Experience": [
+        {
+          "question": "How much remote work experience do you have?",
+          "options": ["None", "Some", "Extensive"]
+        },
+        {
+          "question": "Your comfort with remote work is:",
+          "options": ["Uncomfortable", "Neutral", "Comfortable"]
+        },
+        {
+          "question": "How productive are you working remotely?",
+          "options": ["Less productive", "Equally productive", "More productive"]
+        },
+        {
+          "question": "Your remote work setup is:",
+          "options": ["Inadequate", "Adequate", "Ideal"]
+        },
+        {
+          "question": "How do you communicate remotely?",
+          "options": ["Struggle", "Manage", "Excel"]
+        }
+      ],
+
+      "Risk_Tolerance": [
+        {
+          "question": "Your professional risk tolerance is:",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "question": "When making career decisions, you:",
+          "options": ["Avoid risks", "Take calculated risks", "Take bold risks"]
+        },
+        {
+          "question": "How comfortable are you with uncertainty?",
+          "options": ["Uncomfortable", "Somewhat comfortable", "Very comfortable"]
+        },
+        {
+          "question": "Your investment in your career is:",
+          "options": ["Cautious", "Balanced", "Aggressive"]
+        },
+        {
+          "question": "When opportunities involve risk, you:",
+          "options": ["Avoid", "Consider carefully", "Jump in"]
+        }
+      ],
+
+      "Routine_vs_Dynamic_Work": [
+        {
+          "question": "Your workstyle preference is:",
+          "options": ["Predictable routine", "Mix of routine/new", "Constantly changing"]
+        },
+        {
+          "question": "How do you handle repetitive tasks?",
+          "options": ["Enjoy the predictability", "Tolerate them", "Find them frustrating"]
+        },
+        {
+          "question": "Your ideal work includes:",
+          "options": ["Clear daily structure", "Some variation", "Constant novelty"]
+        },
+        {
+          "question": "When work changes frequently, you feel:",
+          "options": ["Stressed", "Challenged", "Energized"]
+        },
+        {
+          "question": "How adaptable are you to workflow changes?",
+          "options": ["Low", "Medium", "High"]
+        }
+      ],
+
+      "Introvert_Extrovert_Score": [
+        {
+          "question": "In social settings, you are:",
+          "options": ["Reserved", "Balanced", "Outgoing"]
+        },
+        {
+          "question": "After socializing, you feel:",
+          "options": ["Drained", "Neutral", "Energized"]
+        },
+        {
+          "question": "Your social battery recharges by:",
+          "options": ["Being alone", "Mix of alone/social", "Being with others"]
+        },
+        {
+          "question": "In meetings, you typically:",
+          "options": ["Listen more", "Balance speaking/listening", "Speak more"]
+        },
+        {
+          "question": "Networking events make you feel:",
+          "options": ["Dread", "Neutral", "Excited"]
+        }
+      ],
+
+      "Creativity_Score": [
+        {
+          "question": "How creative do you consider yourself?",
+          "options": ["Not creative", "Somewhat creative", "Very creative"]
+        },
+        {
+          "question": "Your idea generation process is:",
+          "options": ["Rare", "Occasional", "Constant"]
+        },
+        {
+          "question": "When problem-solving, you:",
+          "options": ["Use conventional methods", "Sometimes innovate", "Often find novel solutions"]
+        },
+        {
+          "question": "How do you approach artistic activities?",
+          "options": ["Avoid", "Participate sometimes", "Enjoy regularly"]
+        },
+        {
+          "question": "Your brainstorming style is:",
+          "options": ["Structured", "Balanced", "Free-flowing"]
+        }
+      ],
+
+      "Technical_Skill_Level": [
+        {
+          "question": "Your technical proficiency is:",
+          "options": ["Basic", "Intermediate", "Advanced"]
+        },
+        {
+          "question": "When learning new technology, you:",
+          "options": ["Struggle", "Learn with effort", "Pick up quickly"]
+        },
+        {
+          "question": "How comfortable are you with technical tools?",
+          "options": ["Uncomfortable", "Somewhat comfortable", "Very comfortable"]
+        },
+        {
+          "question": "Your approach to technical problems is:",
+          "options": ["Avoid", "Solve with help", "Solve independently"]
+        },
+        {
+          "question": "How do you stay current with technology?",
+          "options": ["Don't", "Occasionally", "Actively"]
+        }
+      ],
+
+      "Work_Hour_Flexibility": [
+        {
+          "question": "Your preferred work schedule is:",
+          "options": ["Fixed hours", "Flexible within range", "Complete flexibility"]
+        },
+        {
+          "question": "How important is schedule flexibility?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Your most productive hours are:",
+          "options": ["Morning", "Afternoon", "Evening", "Variable"]
+        },
+        {
+          "question": "How do you handle non-traditional hours?",
+          "options": ["Prefer not to", "Occasionally okay", "Comfortable"]
+        },
+        {
+          "question": "Your ideal workday structure is:",
+          "options": ["9-5 fixed", "Core hours with flexibility", "Fully autonomous"]
+        }
+      ],
+
+      "Workplace_Preference": [
+        {
+          "question": "Your ideal work arrangement is:",
+          "options": ["Fully on-site", "Hybrid", "Fully remote"]
+        },
+        {
+          "question": "How important is remote work to you?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Your remote work productivity is:",
+          "options": ["Lower than office", "Same as office", "Higher than office"]
+        },
+        {
+          "question": "For collaboration, you prefer:",
+          "options": ["In-person", "Mix", "Virtual"]
+        },
+        {
+          "question": "Your home office setup is:",
+          "options": ["Inadequate", "Adequate", "Ideal"]
+        }
+      ],
+
+      "Work_Life_Balance_Preference": [
+        {
+          "question": "How important is work-life balance?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Your current work-life balance is:",
+          "options": ["Poor", "Adequate", "Excellent"]
+        },
+        {
+          "question": "How often do you work overtime?",
+          "options": ["Rarely", "Sometimes", "Frequently"]
+        },
+        {
+          "question": "Your approach to after-hours work is:",
+          "options": ["Never", "When necessary", "Regularly"]
+        },
+        {
+          "question": "How well do you disconnect from work?",
+          "options": ["Poorly", "Somewhat well", "Very well"]
+        }
+      ],
+
+      "Salary_Expectation": [
+        {
+          "question": "Your expected salary range is:",
+          "options": ["Below market", "Market rate", "Above market"]
+        },
+        {
+          "question": "How important is salary in job decisions?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "Would you accept lower pay for better benefits?",
+          "options": ["No", "Maybe", "Yes"]
+        },
+        {
+          "question": "How frequently do you negotiate salary?",
+          "options": ["Never", "Sometimes", "Always"]
+        },
+        {
+          "question": "Your compensation priorities are:",
+          "options": ["Base salary", "Benefits", "Bonuses", "Equity"]
+        }
+      ],
+
+      "Value_Priority": [
+        {
+          "question": "What do you value most in work?",
+          "options": ["Security", "Recognition", "Creativity", "Helping others"]
+        },
+        {
+          "question": "Your primary work motivation is:",
+          "options": ["Money", "Growth", "Purpose", "Balance"]
+        },
+        {
+          "question": "When choosing jobs, you prioritize:",
+          "options": ["Stability", "Challenge", "Mission", "Culture"]
+        },
+        {
+          "question": "What makes work meaningful for you?",
+          "options": ["Compensation", "Achievement", "Impact", "Learning"]
+        },
+        {
+          "question": "Your professional values emphasize:",
+          "options": ["Tradition", "Innovation", "Service", "Excellence"]
+        }
+      ],
+
+      "LinkedIn_Portfolio": [
+        {
+          "question": "How active are you on professional networks?",
+          "options": ["Not active", "Somewhat active", "Very active"]
+        },
+        {
+          "question": "Your online professional presence is:",
+          "options": ["Minimal", "Moderate", "Extensive"]
+        },
+        {
+          "question": "How important is your digital professional brand?",
+          "options": ["Not important", "Somewhat important", "Very important"]
+        },
+        {
+          "question": "How often do you update your professional profiles?",
+          "options": ["Rarely", "Occasionally", "Regularly"]
+        },
+        {
+          "question": "Your approach to professional networking is:",
+          "options": ["Passive", "Moderate", "Active"]
+        }
+      ],
+
+      "Openness": [
+        {
+          "question": "How open are you to new experiences?",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "question": "Your approach to change is:",
+          "options": ["Resistant", "Adaptable", "Enthusiastic"]
+        },
+        {
+          "question": "How curious are you about new ideas?",
+          "options": ["Not curious", "Somewhat curious", "Very curious"]
+        },
+        {
+          "question": "Your imagination is:",
+          "options": ["Limited", "Moderate", "Vivid"]
+        },
+        {
+          "question": "How conventional are your views?",
+          "options": ["Very conventional", "Moderate", "Very unconventional"]
+        }
+      ],
+
+      "Conscientiousness": [
+        {
+          "question": "How organized are you?",
+          "options": ["Disorganized", "Somewhat organized", "Very organized"]
+        },
+        {
+          "question": "Your approach to deadlines is:",
+          "options": ["Often late", "Usually on time", "Always early"]
+        },
+        {
+          "question": "How detail-oriented are you?",
+          "options": ["Not at all", "Somewhat", "Extremely"]
+        },
+        {
+          "question": "Your planning style is:",
+          "options": ["Spontaneous", "Some planning", "Meticulous planning"]
+        },
+        {
+          "question": "How reliable are you?",
+          "options": ["Unreliable", "Somewhat reliable", "Very reliable"]
+        }
+      ],
+
+      "Extraversion": [
+        {
+          "question": "How outgoing are you?",
+          "options": ["Introverted", "Ambivert", "Extroverted"]
+        },
+        {
+          "question": "In social settings, you:",
+          "options": ["Avoid attention", "Participate", "Seek attention"]
+        },
+        {
+          "question": "Your energy comes from:",
+          "options": ["Being alone", "Mix", "Being with others"]
+        },
+        {
+          "question": "How talkative are you?",
+          "options": ["Quiet", "Moderate", "Talkative"]
+        },
+        {
+          "question": "How do you approach strangers?",
+          "options": ["Avoid", "Neutral", "Initiate contact"]
+        }
+      ],
+
+      "Agreeableness": [
+        {
+          "question": "How trusting are you?",
+          "options": ["Skeptical", "Moderate", "Trusting"]
+        },
+        {
+          "question": "In conflicts, you tend to:",
+          "options": ["Confront", "Compromise", "Accommodate"]
+        },
+        {
+          "question": "How altruistic are you?",
+          "options": ["Not at all", "Somewhat", "Very"]
+        },
+        {
+          "question": "Your cooperation level is:",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "question": "How modest are you?",
+          "options": ["Not modest", "Somewhat modest", "Very modest"]
+        }
+      ],
+
+      "Neuroticism": [
+        {
+          "question": "How emotionally stable are you?",
+          "options": ["Low", "Medium", "High"]
+        },
+        {
+          "question": "Your stress response is typically:",
+          "options": ["High anxiety", "Moderate stress", "Calm"]
+        },
+        {
+          "question": "How often do you feel depressed?",
+          "options": ["Frequently", "Sometimes", "Rarely"]
+        },
+        {
+          "question": "Your self-confidence is:",
+          "options": ["Low", "Moderate", "High"]
+        },
+        {
+          "question": "How vulnerable are you to stress?",
+          "options": ["Very vulnerable", "Somewhat vulnerable", "Resilient"]
+        }
       ]
     }
-  ],
-  "Work_Style": [
-    {
-      "question": "What best describes your preference for Work Style? (Q1)",
-      "options": [
-        "Flexible",
-        "Independent",
-        "Collaborative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Style? (Q2)",
-      "options": [
-        "Flexible",
-        "Independent",
-        "Collaborative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Style? (Q3)",
-      "options": [
-        "Flexible",
-        "Independent",
-        "Collaborative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Style? (Q4)",
-      "options": [
-        "Flexible",
-        "Independent",
-        "Collaborative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Style? (Q5)",
-      "options": [
-        "Flexible",
-        "Independent",
-        "Collaborative"
-      ]
-    }
-  ],
-  "Strengths": [
-    {
-      "question": "What best describes your preference for Strengths? (Q1)",
-      "options": [
-        "Practical",
-        "Analytical",
-        "Strategic",
-        "Creative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Strengths? (Q2)",
-      "options": [
-        "Practical",
-        "Analytical",
-        "Strategic",
-        "Creative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Strengths? (Q3)",
-      "options": [
-        "Practical",
-        "Analytical",
-        "Strategic",
-        "Creative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Strengths? (Q4)",
-      "options": [
-        "Practical",
-        "Analytical",
-        "Strategic",
-        "Creative"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Strengths? (Q5)",
-      "options": [
-        "Practical",
-        "Analytical",
-        "Strategic",
-        "Creative"
-      ]
-    }
-  ],
-  "Communication_Skills": [
-    {
-      "question": "What best describes your preference for Communication Skills? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Communication Skills? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Communication Skills? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Communication Skills? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Communication Skills? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Leadership_Skills": [
-    {
-      "question": "What best describes your preference for Leadership Skills? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Leadership Skills? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Leadership Skills? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Leadership Skills? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Leadership Skills? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Teamwork_Skills": [
-    {
-      "question": "What best describes your preference for Teamwork Skills? (Q1)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Teamwork Skills? (Q2)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Teamwork Skills? (Q3)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Teamwork Skills? (Q4)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Teamwork Skills? (Q5)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    }
-  ],
-  "Decision_Making": [
-    {
-      "question": "What best describes your preference for Decision Making? (Q1)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Decision Making? (Q2)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Decision Making? (Q3)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Decision Making? (Q4)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Decision Making? (Q5)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    }
-  ],
-  "Aptitude_Level": [
-    {
-      "question": "What best describes your preference for Aptitude Level? (Q1)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Aptitude Level? (Q2)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Aptitude Level? (Q3)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Aptitude Level? (Q4)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Aptitude Level? (Q5)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    }
-  ],
-  "Field_of_Study": [
-    {
-      "question": "What best describes your preference for Field of Study? (Q1)",
-      "options": [
-        "Public Relations",
-        "Mathematics",
-        "Law",
-        "Philosophy"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Field of Study? (Q2)",
-      "options": [
-        "Public Relations",
-        "Mathematics",
-        "Law",
-        "Philosophy"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Field of Study? (Q3)",
-      "options": [
-        "Public Relations",
-        "Mathematics",
-        "Law",
-        "Philosophy"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Field of Study? (Q4)",
-      "options": [
-        "Public Relations",
-        "Mathematics",
-        "Law",
-        "Philosophy"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Field of Study? (Q5)",
-      "options": [
-        "Public Relations",
-        "Mathematics",
-        "Law",
-        "Philosophy"
-      ]
-    }
-  ],
-  "Years_of_Experience": [
-    {
-      "question": "What best describes your preference for Years of Experience? (Q1)",
-      "options": [
-        "16",
-        "2",
-        "6",
-        "15"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Years of Experience? (Q2)",
-      "options": [
-        "16",
-        "2",
-        "6",
-        "15"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Years of Experience? (Q3)",
-      "options": [
-        "16",
-        "2",
-        "6",
-        "15"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Years of Experience? (Q4)",
-      "options": [
-        "16",
-        "2",
-        "6",
-        "15"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Years of Experience? (Q5)",
-      "options": [
-        "16",
-        "2",
-        "6",
-        "15"
-      ]
-    }
-  ],
-  "Adaptability": [
-    {
-      "question": "What best describes your preference for Adaptability? (Q1)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Adaptability? (Q2)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Adaptability? (Q3)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Adaptability? (Q4)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Adaptability? (Q5)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    }
-  ],
-  "Time_Management": [
-    {
-      "question": "What best describes your preference for Time Management? (Q1)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Time Management? (Q2)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Time Management? (Q3)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Time Management? (Q4)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Time Management? (Q5)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    }
-  ],
-  "Problem_Solving": [
-    {
-      "question": "What best describes your preference for Problem Solving? (Q1)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Problem Solving? (Q2)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Problem Solving? (Q3)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Problem Solving? (Q4)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Problem Solving? (Q5)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    }
-  ],
-  "Emotional_Intelligence": [
-    {
-      "question": "What best describes your preference for Emotional Intelligence? (Q1)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Emotional Intelligence? (Q2)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Emotional Intelligence? (Q3)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Emotional Intelligence? (Q4)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Emotional Intelligence? (Q5)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    }
-  ],
-  "Stress_Tolerance": [
-    {
-      "question": "What best describes your preference for Stress Tolerance? (Q1)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Stress Tolerance? (Q2)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Stress Tolerance? (Q3)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Stress Tolerance? (Q4)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Stress Tolerance? (Q5)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    }
-  ],
-  "Learning_Style": [
-    {
-      "question": "What best describes your preference for Learning Style? (Q1)",
-      "options": [
-        "Visual",
-        "Auditory",
-        "Kinesthetic",
-        "Reading/Writing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Learning Style? (Q2)",
-      "options": [
-        "Visual",
-        "Auditory",
-        "Kinesthetic",
-        "Reading/Writing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Learning Style? (Q3)",
-      "options": [
-        "Visual",
-        "Auditory",
-        "Kinesthetic",
-        "Reading/Writing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Learning Style? (Q4)",
-      "options": [
-        "Visual",
-        "Auditory",
-        "Kinesthetic",
-        "Reading/Writing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Learning Style? (Q5)",
-      "options": [
-        "Visual",
-        "Auditory",
-        "Kinesthetic",
-        "Reading/Writing"
-      ]
-    }
-  ],
-  "Certifications_Count": [
-    {
-      "question": "What best describes your preference for Certifications Count? (Q1)",
-      "options": [
-        "5",
-        "3",
-        "0",
-        "4"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Certifications Count? (Q2)",
-      "options": [
-        "5",
-        "3",
-        "0",
-        "4"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Certifications Count? (Q3)",
-      "options": [
-        "5",
-        "3",
-        "0",
-        "4"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Certifications Count? (Q4)",
-      "options": [
-        "5",
-        "3",
-        "0",
-        "4"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Certifications Count? (Q5)",
-      "options": [
-        "5",
-        "3",
-        "0",
-        "4"
-      ]
-    }
-  ],
-  "Technical_Skill_Level": [
-    {
-      "question": "What best describes your preference for Technical Skill Level? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Technical Skill Level? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Technical Skill Level? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Technical Skill Level? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Technical Skill Level? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Career_Goals": [
-    {
-      "question": "What best describes your preference for Career Goals? (Q1)",
-      "options": [
-        "Journalism",
-        "Finance",
-        "Education",
-        "Marketing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Career Goals? (Q2)",
-      "options": [
-        "Journalism",
-        "Finance",
-        "Education",
-        "Marketing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Career Goals? (Q3)",
-      "options": [
-        "Journalism",
-        "Finance",
-        "Education",
-        "Marketing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Career Goals? (Q4)",
-      "options": [
-        "Journalism",
-        "Finance",
-        "Education",
-        "Marketing"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Career Goals? (Q5)",
-      "options": [
-        "Journalism",
-        "Finance",
-        "Education",
-        "Marketing"
-      ]
-    }
-  ],
-  "Location_Preference": [
-    {
-      "question": "What best describes your preference for Location Preference? (Q1)",
-      "options": [
-        "Rural",
-        "Flexible",
-        "Urban"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Location Preference? (Q2)",
-      "options": [
-        "Rural",
-        "Flexible",
-        "Urban"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Location Preference? (Q3)",
-      "options": [
-        "Rural",
-        "Flexible",
-        "Urban"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Location Preference? (Q4)",
-      "options": [
-        "Rural",
-        "Flexible",
-        "Urban"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Location Preference? (Q5)",
-      "options": [
-        "Rural",
-        "Flexible",
-        "Urban"
-      ]
-    }
-  ],
-  "Willing_to_Relocate": [
-    {
-      "question": "What best describes your preference for Willing to Relocate? (Q1)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Willing to Relocate? (Q2)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Willing to Relocate? (Q3)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Willing to Relocate? (Q4)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Willing to Relocate? (Q5)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    }
-  ],
-  "Highest_Degree": [
-    {
-      "question": "What best describes your preference for Highest Degree? (Q1)",
-      "options": [
-        "Masters",
-        "Bachelors",
-        "Diploma",
-        "PhD"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Highest Degree? (Q2)",
-      "options": [
-        "Masters",
-        "Bachelors",
-        "Diploma",
-        "PhD"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Highest Degree? (Q3)",
-      "options": [
-        "Masters",
-        "Bachelors",
-        "Diploma",
-        "PhD"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Highest Degree? (Q4)",
-      "options": [
-        "Masters",
-        "Bachelors",
-        "Diploma",
-        "PhD"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Highest Degree? (Q5)",
-      "options": [
-        "Masters",
-        "Bachelors",
-        "Diploma",
-        "PhD"
-      ]
-    }
-  ],
-  "GPA": [
-    {
-      "question": "What best describes your preference for GPA? (Q1)",
-      "options": [
-        "2.27",
-        "3.47",
-        "2.02",
-        "2.7"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GPA? (Q2)",
-      "options": [
-        "2.27",
-        "3.47",
-        "2.02",
-        "2.7"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GPA? (Q3)",
-      "options": [
-        "2.27",
-        "3.47",
-        "2.02",
-        "2.7"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GPA? (Q4)",
-      "options": [
-        "2.27",
-        "3.47",
-        "2.02",
-        "2.7"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GPA? (Q5)",
-      "options": [
-        "2.27",
-        "3.47",
-        "2.02",
-        "2.7"
-      ]
-    }
-  ],
-  "Industry_of_Experience": [
-    {
-      "question": "What best describes your preference for Industry of Experience? (Q1)",
-      "options": [
-        "Education",
-        "Arts",
-        "Retail",
-        "Finance"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Industry of Experience? (Q2)",
-      "options": [
-        "Education",
-        "Arts",
-        "Retail",
-        "Finance"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Industry of Experience? (Q3)",
-      "options": [
-        "Education",
-        "Arts",
-        "Retail",
-        "Finance"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Industry of Experience? (Q4)",
-      "options": [
-        "Education",
-        "Arts",
-        "Retail",
-        "Finance"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Industry of Experience? (Q5)",
-      "options": [
-        "Education",
-        "Arts",
-        "Retail",
-        "Finance"
-      ]
-    }
-  ],
-  "Internship_Experience": [
-    {
-      "question": "What best describes your preference for Internship Experience? (Q1)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Internship Experience? (Q2)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Internship Experience? (Q3)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Internship Experience? (Q4)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Internship Experience? (Q5)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    }
-  ],
-  "Remote_Work_Experience": [
-    {
-      "question": "What best describes your preference for Remote Work Experience? (Q1)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Remote Work Experience? (Q2)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Remote Work Experience? (Q3)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Remote Work Experience? (Q4)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Remote Work Experience? (Q5)",
-      "options": [
-        "No",
-        "Yes"
-      ]
-    }
-  ],
-  "Risk_Tolerance": [
-    {
-      "question": "What best describes your preference for Risk Tolerance? (Q1)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Risk Tolerance? (Q2)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Risk Tolerance? (Q3)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Risk Tolerance? (Q4)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Risk Tolerance? (Q5)",
-      "options": [
-        "High",
-        "Low",
-        "Medium"
-      ]
-    }
-  ],
-  "Routine_vs_Dynamic_Work": [
-    {
-      "question": "What best describes your preference for Routine vs Dynamic Work? (Q1)",
-      "options": [
-        "Dynamic",
-        "Routine"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Routine vs Dynamic Work? (Q2)",
-      "options": [
-        "Dynamic",
-        "Routine"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Routine vs Dynamic Work? (Q3)",
-      "options": [
-        "Dynamic",
-        "Routine"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Routine vs Dynamic Work? (Q4)",
-      "options": [
-        "Dynamic",
-        "Routine"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Routine vs Dynamic Work? (Q5)",
-      "options": [
-        "Dynamic",
-        "Routine"
-      ]
-    }
-  ],
-  "Introvert_Extrovert_Score": [
-    {
-      "question": "What best describes your preference for Introvert Extrovert Score? (Q1)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Introvert Extrovert Score? (Q2)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Introvert Extrovert Score? (Q3)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Introvert Extrovert Score? (Q4)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Introvert Extrovert Score? (Q5)",
-      "options": [
-        "High",
-        "Medium",
-        "Low"
-      ]
-    }
-  ],
-  "Creativity_Score": [
-    {
-      "question": "What best describes your preference for Creativity Score? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Creativity Score? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Creativity Score? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Creativity Score? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Creativity Score? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Courses_Completed": [
-    {
-      "question": "What best describes your preference for Courses Completed? (Q1)",
-      "options": [
-        "8",
-        "7",
-        "10",
-        "1"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Courses Completed? (Q2)",
-      "options": [
-        "8",
-        "7",
-        "10",
-        "1"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Courses Completed? (Q3)",
-      "options": [
-        "8",
-        "7",
-        "10",
-        "1"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Courses Completed? (Q4)",
-      "options": [
-        "8",
-        "7",
-        "10",
-        "1"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Courses Completed? (Q5)",
-      "options": [
-        "8",
-        "7",
-        "10",
-        "1"
-      ]
-    }
-  ],
-  "Work_Hour_Flexibility": [
-    {
-      "question": "What best describes your preference for Work Hour Flexibility? (Q1)",
-      "options": [
-        "9\u00e2\u20ac\u201c5",
-        "Freelance",
-        "Shifts"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Hour Flexibility? (Q2)",
-      "options": [
-        "9\u00e2\u20ac\u201c5",
-        "Freelance",
-        "Shifts"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Hour Flexibility? (Q3)",
-      "options": [
-        "9\u00e2\u20ac\u201c5",
-        "Freelance",
-        "Shifts"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Hour Flexibility? (Q4)",
-      "options": [
-        "9\u00e2\u20ac\u201c5",
-        "Freelance",
-        "Shifts"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Hour Flexibility? (Q5)",
-      "options": [
-        "9\u00e2\u20ac\u201c5",
-        "Freelance",
-        "Shifts"
-      ]
-    }
-  ],
-  "Workplace_Preference": [
-    {
-      "question": "What best describes your preference for Workplace Preference? (Q1)",
-      "options": [
-        "Remote",
-        "Hybrid",
-        "On-site"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Workplace Preference? (Q2)",
-      "options": [
-        "Remote",
-        "Hybrid",
-        "On-site"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Workplace Preference? (Q3)",
-      "options": [
-        "Remote",
-        "Hybrid",
-        "On-site"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Workplace Preference? (Q4)",
-      "options": [
-        "Remote",
-        "Hybrid",
-        "On-site"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Workplace Preference? (Q5)",
-      "options": [
-        "Remote",
-        "Hybrid",
-        "On-site"
-      ]
-    }
-  ],
-  "Work_Life_Balance_Preference": [
-    {
-      "question": "What best describes your preference for Work Life Balance Preference? (Q1)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Life Balance Preference? (Q2)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Life Balance Preference? (Q3)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Life Balance Preference? (Q4)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Work Life Balance Preference? (Q5)",
-      "options": [
-        "Medium",
-        "Low",
-        "High"
-      ]
-    }
-  ],
-  "Salary_Expectation": [
-    {
-      "question": "What best describes your preference for Salary Expectation? (Q1)",
-      "options": [
-        "30k\u00e2\u20ac\u201c60k",
-        ">100k",
-        "<30k",
-        "60k\u00e2\u20ac\u201c100k"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Salary Expectation? (Q2)",
-      "options": [
-        "30k\u00e2\u20ac\u201c60k",
-        ">100k",
-        "<30k",
-        "60k\u00e2\u20ac\u201c100k"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Salary Expectation? (Q3)",
-      "options": [
-        "30k\u00e2\u20ac\u201c60k",
-        ">100k",
-        "<30k",
-        "60k\u00e2\u20ac\u201c100k"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Salary Expectation? (Q4)",
-      "options": [
-        "30k\u00e2\u20ac\u201c60k",
-        ">100k",
-        "<30k",
-        "60k\u00e2\u20ac\u201c100k"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Salary Expectation? (Q5)",
-      "options": [
-        "30k\u00e2\u20ac\u201c60k",
-        ">100k",
-        "<30k",
-        "60k\u00e2\u20ac\u201c100k"
-      ]
-    }
-  ],
-  "Value_Priority": [
-    {
-      "question": "What best describes your preference for Value Priority? (Q1)",
-      "options": [
-        "Helping Others",
-        "Security",
-        "Recognition",
-        "Innovation"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Value Priority? (Q2)",
-      "options": [
-        "Helping Others",
-        "Security",
-        "Recognition",
-        "Innovation"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Value Priority? (Q3)",
-      "options": [
-        "Helping Others",
-        "Security",
-        "Recognition",
-        "Innovation"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Value Priority? (Q4)",
-      "options": [
-        "Helping Others",
-        "Security",
-        "Recognition",
-        "Innovation"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Value Priority? (Q5)",
-      "options": [
-        "Helping Others",
-        "Security",
-        "Recognition",
-        "Innovation"
-      ]
-    }
-  ],
-  "LinkedIn_Portfolio": [
-    {
-      "question": "What best describes your preference for LinkedIn Portfolio? (Q1)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for LinkedIn Portfolio? (Q2)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for LinkedIn Portfolio? (Q3)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for LinkedIn Portfolio? (Q4)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for LinkedIn Portfolio? (Q5)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    }
-  ],
-  "GitHub_Repos": [
-    {
-      "question": "What best describes your preference for GitHub Repos? (Q1)",
-      "options": [
-        "1",
-        "0",
-        "20",
-        "6"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GitHub Repos? (Q2)",
-      "options": [
-        "1",
-        "0",
-        "20",
-        "6"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GitHub Repos? (Q3)",
-      "options": [
-        "1",
-        "0",
-        "20",
-        "6"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GitHub Repos? (Q4)",
-      "options": [
-        "1",
-        "0",
-        "20",
-        "6"
-      ]
-    },
-    {
-      "question": "What best describes your preference for GitHub Repos? (Q5)",
-      "options": [
-        "1",
-        "0",
-        "20",
-        "6"
-      ]
-    }
-  ],
-  "Public_Speaking_Experience": [
-    {
-      "question": "What best describes your preference for Public Speaking Experience? (Q1)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Public Speaking Experience? (Q2)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Public Speaking Experience? (Q3)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Public Speaking Experience? (Q4)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Public Speaking Experience? (Q5)",
-      "options": [
-        "Yes",
-        "No"
-      ]
-    }
-  ],
-  "Openness": [
-    {
-      "question": "What best describes your preference for Openness? (Q1)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Openness? (Q2)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Openness? (Q3)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Openness? (Q4)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Openness? (Q5)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    }
-  ],
-  "Conscientiousness": [
-    {
-      "question": "What best describes your preference for Conscientiousness? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Conscientiousness? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Conscientiousness? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Conscientiousness? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Conscientiousness? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Extraversion": [
-    {
-      "question": "What best describes your preference for Extraversion? (Q1)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Extraversion? (Q2)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Extraversion? (Q3)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Extraversion? (Q4)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Extraversion? (Q5)",
-      "options": [
-        "Low",
-        "Medium",
-        "High"
-      ]
-    }
-  ],
-  "Agreeableness": [
-    {
-      "question": "What best describes your preference for Agreeableness? (Q1)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Agreeableness? (Q2)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Agreeableness? (Q3)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Agreeableness? (Q4)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Agreeableness? (Q5)",
-      "options": [
-        "Low",
-        "High",
-        "Medium"
-      ]
-    }
-  ],
-  "Neuroticism": [
-    {
-      "question": "What best describes your preference for Neuroticism? (Q1)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Neuroticism? (Q2)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Neuroticism? (Q3)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Neuroticism? (Q4)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    },
-    {
-      "question": "What best describes your preference for Neuroticism? (Q5)",
-      "options": [
-        "Medium",
-        "High",
-        "Low"
-      ]
-    }
-  ]
+  }
 }
