@@ -1,76 +1,125 @@
-import pandas as pd
-import numpy as np
+import streamlit as st
 import pickle
 import json
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-import os # Import the os module
+import numpy as np
+import random
+import pandas as pd
+from sklearn.feature_selection import mutual_info_classif
 
-# Load data
-df = pd.read_excel("new updated data.xlsx")
-df = df.dropna()
+# Load model, encoders, questions, and data for IG calculation
+@st.cache_resource(show_spinner=False)
+def load_resources():
+    with open("model.pkl", "rb") as f:
+        model, encoders, target_encoder = pickle.load(f)
+    with open("questions.json", "r") as f:
+        questions = json.load(f)
+    # Load training data for IG calculation
+    data = pd.read_csv("training_data.csv")  # Provide your CSV here
+    return model, encoders, target_encoder, questions, data
 
-# Define target and features
-target_col = "Predicted_Career_Field"
-features = [col for col in df.columns if col != target_col]
+model, encoders, target_encoder, questions, data = load_resources()
 
-X = df[features].copy()
-y = df[target_col].copy()
+st.set_page_config(page_title="Career Path Predictor with Feature Selection", layout="centered")
 
-# Encode categorical features using LabelEncoder and save encoders
-encoders = {}
-for col in features:
-    if X[col].dtype == "object" or isinstance(X[col].iloc[0], str):
-        le = LabelEncoder()
-        X[col] = le.fit_transform(X[col].astype(str))
-        encoders[col] = le
+st.title("🎯 Career Path Predictor with Feature Selection")
 
-# Encode target column
-target_encoder = LabelEncoder()
-y = target_encoder.fit_transform(y)
+st.markdown("""
+This app predicts your ideal career field using a Decision Tree model.
+You can select features based on their **Information Gain** to customize the questionnaire.
+""")
 
-# Train/test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Separate features and target for IG
+target_col = "Predicted_Career_Field"  # Your dataset target column
+X = data.drop(columns=[target_col])
+y = data[target_col]
 
-# Train Decision Tree classifier
-model = DecisionTreeClassifier(random_state=42)
-model.fit(X_train, y_train)
+# Encode target for IG calculation
+le_target = target_encoder
 
-# Save model, encoders, and target encoder
-model_file = "model.pkl"
-with open(model_file, "wb") as f:
-    pickle.dump((model, encoders, target_encoder), f)
+# Compute Information Gain (Mutual Information) for each feature
+st.sidebar.header("Feature Selection")
 
-# Add a check to ensure the model file was saved correctly
-if not os.path.exists(model_file) or os.path.getsize(model_file) == 0:
-    print(f"Error: {model_file} was not created or is empty.")
-else:
-    print(f"{model_file} saved successfully.")
+# Encode categorical features temporarily for IG
+X_encoded = X.copy()
+for col in X_encoded.columns:
+    if col in encoders:
+        X_encoded[col] = encoders[col].transform(X_encoded[col])
+    else:
+        # If numeric, keep as is
+        try:
+            X_encoded[col] = X_encoded[col].astype(float)
+        except:
+            X_encoded[col] = 0  # fallback
 
+mi_scores = mutual_info_classif(X_encoded, le_target.transform(y), discrete_features='auto')
+mi_df = pd.DataFrame({"feature": X_encoded.columns, "info_gain": mi_scores})
+mi_df = mi_df.sort_values(by="info_gain", ascending=False).reset_index(drop=True)
 
-# Generate 5 questions per feature randomly from unique options
-questions = {}
-for feature in features:
-    unique_vals = df[feature].dropna().astype(str).unique()
-    for i in range(5):
-        question_text = f"Question {i+1}: Choose your preference for {feature.replace('_', ' ')}"
-        options = np.random.choice(unique_vals, size=min(4, len(unique_vals)), replace=False).tolist()
-        questions.setdefault(feature, []).append({
-            "question": question_text,
-            "options": options
-        })
+# Slider for IG threshold
+threshold = st.sidebar.slider(
+    "Information Gain Threshold",
+    min_value=0.0,
+    max_value=mi_df["info_gain"].max(),
+    value=0.01,
+    step=0.005,
+    help="Select minimum Information Gain threshold to include features."
+)
 
-# Save questions to JSON
-questions_file = "questions.json"
-with open(questions_file, "w") as f:
-    json.dump(questions, f, indent=4)
+# Filter features by threshold
+selected_features = mi_df[mi_df["info_gain"] >= threshold]["feature"].tolist()
 
-# Add a check to ensure the questions file was saved correctly
-if not os.path.exists(questions_file) or os.path.getsize(questions_file) == 0:
-     print(f"Error: {questions_file} was not created or is empty.")
-else:
-    print(f"{questions_file} saved successfully.")
+st.sidebar.markdown(f"**Selected Features ({len(selected_features)}):**")
+for f in selected_features:
+    st.sidebar.write(f"- {f.replace('_', ' ').title()}")
 
+if len(selected_features) == 0:
+    st.warning("No features selected. Please lower the threshold.")
+    st.stop()
 
-print("Model and questions files have been saved.")
+# Show questions only for selected features
+st.subheader("Please answer the following questions:")
+
+responses = {}
+for feature in selected_features:
+    if feature in questions:
+        q = random.choice(questions[feature])
+        response = st.radio(
+            label=f"**{feature.replace('_', ' ').title()}**: {q['question']}",
+            options=q["options"],
+            key=feature
+        )
+        responses[feature] = response
+    else:
+        # For features without questions, ask simple input (optional)
+        responses[feature] = st.text_input(f"Enter value for {feature.replace('_', ' ').title()}:", key=feature)
+
+if st.button("Predict Career Field"):
+    # Validate all selected features answered
+    if len(responses) < len(selected_features):
+        st.warning("Please answer all questions.")
+    else:
+        try:
+            input_vector = []
+            for f in selected_features:
+                val = responses[f]
+                if f in encoders:
+                    val = encoders[f].transform([val])[0]
+                else:
+                    try:
+                        val = float(val)
+                    except:
+                        val = 0
+                input_vector.append(val)
+
+            prediction = model.predict([input_vector])[0]
+            career = target_encoder.inverse_transform([prediction])[0]
+
+            st.success(f"### Your predicted career field is: **{career}**")
+            st.balloons()
+
+        except Exception as e:
+            st.error(f"Prediction error: {e}")
+
+# Footer
+st.markdown("---")
+st.markdown("© 2025 Career Path Predictor with Feature Selection")
